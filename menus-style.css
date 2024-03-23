@@ -1,0 +1,172 @@
+@media only screen and (max-width: 500px) {
+  html.menus .top-section .slogan .text {
+    font-size: 2.5rem;
+  }
+}
+/* #region top-section */
+html.menus .top-section .background-image {
+  background-image: url(./images/menu.jpg);
+}
+/* #endregion */
+/* #region section-1 */
+html.menus .section-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  background-color: #bdb8be /* dadfe3 alternative*/;
+  color: #212529;
+}
+/* #region header */
+html.menus .section-1 .header {
+  text-align: center;
+}
+html.menus .section-1 .header .title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+html.menus .section-1 .header .text {
+  font-size: 1.3rem;
+  opacity: 0.6;
+}
+/* #endregion */
+/* #region nav */
+html.menus .section-1 nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  font-weight: 600;
+}
+html.menus .section-1 nav ul li {
+  position: relative;
+
+  cursor: pointer;
+}
+html.menus .section-1 nav ul li::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  transform: translate(0, 5px);
+
+  background-color: currentColor;
+
+  transition: all 0.2s ease-out;
+}
+html.menus .section-1 nav ul li:hover::after {
+  width: 100%;
+}
+html.menus .section-1 nav.breakfast ul li.breakfast::after,
+html.menus .section-1 nav.lunch ul li.lunch::after,
+html.menus .section-1 nav.dinner ul li.dinner::after,
+html.menus .section-1 nav.drinks ul li.drinks::after {
+  width: 100%;
+}
+
+/* #endregion */
+/* #region dishes-grid */
+html.menus .section-1 .dishes-grid {
+  height: 1100px;
+  width: 100%;
+  overflow: hidden;
+}
+html.menus .section-1 .dishes-grid .dishes-section {
+  height: 0;
+  width: 100%;
+  opacity: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-content: start;
+  gap: 20px;
+
+  transition: opacity 0.2s ease-out;
+}
+html.menus .section-1 nav.breakfast + .dishes-grid .dishes-section.breakfast,
+html.menus .section-1 nav.lunch + .dishes-grid .dishes-section.lunch,
+html.menus .section-1 nav.dinner + .dishes-grid .dishes-section.dinner,
+html.menus .section-1 nav.drinks + .dishes-grid .dishes-section.drinks {
+  height: 500px;
+  opacity: 1;
+}
+html.menus .section-1 .dishes-grid .dishes-section .dish {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+
+  text-transform: capitalize;
+  font-size: 1.3rem;
+
+  padding-bottom: 15px;
+  border-bottom: 1px solid #212529;
+
+  z-index: 500;
+}
+
+html.menus .section-1 .dishes-grid .dishes-section .dish .image {
+  background-size: cover;
+  background-position: center;
+
+  height: 80px;
+  width: 80px;
+
+  border-radius: 4px;
+}
+html.menus .section-1 .dishes-grid .dishes-section .dish .price {
+  margin-left: auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+html.menus .section-1 .dishes-grid .dishes-section .dish:hover .price {
+  animation: jiggle forwards ease-out 0.2s;
+}
+/* #endregion */
+/* #endregion */
+@media only screen and (min-width: 800px) {
+  /* #region section-1 */
+  html.menus .section-1 {
+    gap: 100px;
+  }
+  /* #endregion */
+}
+@media only screen and (min-width: 1200px) {
+  /* #region section-1 */
+  /* #region nav */
+  html.menus .section-1 nav ul {
+    gap: 50px;
+    font-size: 1.5rem;
+  }
+  html.menus .section-1 nav ul li::after {
+    transform: translate(0, 7.5px);
+  }
+  /* #endregion */
+  /* #region dishes-grid */
+  html.menus .section-1 .dishes-grid {
+    height: 800px;
+  }
+  html.menus .section-1 .dishes-grid .dishes-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 60px;
+  }
+  html.menus .section-1 .dishes-grid .dishes-section .dish .image {
+    background-size: cover;
+    background-position: center;
+
+    height: 120px;
+    width: 120px;
+
+    border-radius: 4px;
+  }
+  /* #endregion */
+  /* #endregion */
+}

@@ -1,0 +1,200 @@
+html.contact .top-section .background-image {
+  background-image: url(./images/contact.jpg);
+  background-position: 30%;
+  background-position-x: 20%;
+}
+
+html.contact .section-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  background-color: #e2dbd2 /* alternative #bfb6aa, #e2dbd2 */;
+  color: #212529;
+}
+html.contact .section-1 .header {
+  text-align: center;
+}
+html.contact .section-1 .header .title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+html.contact .section-1 .header .text {
+  font-size: 1.1rem;
+  opacity: 0.6;
+}
+html.contact .section-1 .content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+html.contact .section-1 .content .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+html.contact .section-1 .content .contact-info .title {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+html.contact .section-1 .content .contact-info a {
+  color: #3952a4;
+  text-decoration: underline;
+}
+html.contact .section-1 .content .contact-info .address {
+  opacity: 0.6;
+}
+html.contact .section-1 .content form {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 100%;
+}
+html.contact .section-1 .content form .hidden {
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+}
+html.contact .section-1 .content form .form-element {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 100%;
+
+  padding: 15px;
+  border-radius: 0;
+  border: 2px solid #8c8e9a;
+
+  background-color: transparent;
+  outline: none;
+
+  font-size: 1.5rem;
+}
+html.contact .section-1 .content form .form-element:focus-visible {
+  border-color: black;
+}
+html.contact .section-1 .content form input {
+  height: 50px;
+}
+html.contact .section-1 .content form textarea {
+  height: 300px;
+  margin-bottom: 10px;
+}
+html.contact .section-1 .content form .btn {
+  color: #171719;
+  border-color: #171719;
+
+  cursor: pointer;
+}
+html.contact .section-1 .content form .btn:hover {
+  color: white;
+}
+html.contact .section-1 .content form .btn::before {
+  background-color: #171719;
+}
+html.contact section#book-a-table {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  background-color: hsl(200, 5%, 7%);
+  color: var(--text-color);
+}
+html.contact section#book-a-table .header {
+  text-align: center;
+  width: 85%;
+}
+html.contact section#book-a-table .header .title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+html.contact section#book-a-table .header .text {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+html.contact section#book-a-table form {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  width: 90%;
+}
+html.contact section#book-a-table form .hidden {
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+}
+html.contact section#book-a-table form .form-element {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 100%;
+
+  padding: 15px;
+  border-radius: 0;
+  border: 1px solid #8c8e9a;
+
+  background-color: #171719;
+  color: var(--text-color);
+
+  outline: none;
+
+  font-size: 1.5rem;
+}
+html.contact section#book-a-table form .form-element:focus-visible {
+  border-color: white;
+}
+html.contact section#book-a-table form .btn {
+  grid-column: 1 / -1;
+
+  margin-top: 10px;
+  height: 60px;
+  font-size: 1.1rem;
+}
+@media only screen and (min-width: 800px) {
+  html.contact .top-section .slogan {
+    top: 20%;
+  }
+  html.contact .section-1 {
+    gap: 60px;
+    padding-bottom: 60px;
+  }
+  html.contact .section-1 .content {
+    flex-direction: row-reverse;
+    gap: 40px;
+    width: 80%;
+  }
+  html.contact .section-1 .content .contact-info {
+    gap: 40px;
+  }
+  html.contact .section-1 .content form .btn {
+    width: calc(150px + 18vw);
+    height: 50px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+  }
+  html.contact section#book-a-table form {
+    width: min(85vw, 1700px);
+  }
+  html.contact section#book-a-table form {
+    grid-template-columns: 1fr 1fr;
+  }
+  html.contact section#book-a-table form .btn {
+    width: 600px;
+    justify-self: center;
+
+    margin-top: 20px;
+  }
+}
